@@ -12,7 +12,7 @@ const app=express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://verdant-phoenix-c09c73.netlify.app/"
+  "https://verdant-phoenix-c09c73.netlify.app"
 ];
 
 app.use(cors({
