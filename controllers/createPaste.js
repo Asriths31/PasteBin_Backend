@@ -19,6 +19,7 @@ export async function createPaste(req,res){
 
         if(ttl_seconds>0){
             doc.expiryDate=new Date(Date.now()+ttl_seconds*1000);
+            console.log("dateee",Date.now())
         }
         if(max_views>0){
             doc.maxViews=max_views;

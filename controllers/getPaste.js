@@ -11,7 +11,7 @@ export async function getPaste(req,res) {
         if (!foundPaste) {
             return res.status(404).json({message: "Paste Not Found"})
         }
-        const validate=pasteValidation(foundPaste)
+        const validate=pasteValidation(req,foundPaste)
         if(!validate.isValid){
             return res.status(404).json({message:validate.message})
         }
