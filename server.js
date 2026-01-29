@@ -16,6 +16,18 @@ app.use(cors({
 
 app.use(express.json())
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://paste-bin-frontend.vercel.app"
+];
+
+const origin = req.headers.origin;
+
+if (allowedOrigins.includes(origin)) {
+  res.setHeader("Access-Control-Allow-Origin", origin);
+}
+
+
 const connectToDb=()=>{
     const mongo_uri=process.env.MONGO_URI
     if(mongo_uri){
