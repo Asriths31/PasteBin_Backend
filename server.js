@@ -21,12 +21,6 @@ const allowedOrigins = [
   "https://paste-bin-frontend.vercel.app"
 ];
 
-const origin = req.headers.origin;
-
-if (allowedOrigins.includes(origin)) {
-  res.setHeader("Access-Control-Allow-Origin", origin);
-}
-
 
 const connectToDb=()=>{
     const mongo_uri=process.env.MONGO_URI
