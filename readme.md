@@ -6,6 +6,11 @@
 - Node.js (v18 or later)
 - MongoDB (local instance or MongoDB Atlas)
 
+### Load Environment variables
+- PORT
+- MONGO_URI
+- DEPLOYED_URL(url of the backend)
+
 ### Steps
 
 ```bash
@@ -15,11 +20,6 @@ cd <project-folder>
 
 # Install dependencies
 npm install
-
-#Load Environment variables
--PORT
--MONGO_URI
--DEPLOYED_URL
 
 #Run Server
 npm start
