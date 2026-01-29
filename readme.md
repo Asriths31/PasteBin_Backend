@@ -1,4 +1,7 @@
-# Paste App
+# Pastebin‐Lite App
+
+Pastebin Lite is a lightweight web application that allows users to create and share text pastes easily.  
+The project focuses on simplicity, fast performance.
 
 ## How to run the app locally
 
@@ -10,6 +13,17 @@
 - PORT
 - MONGO_URI
 - DEPLOYED_URL(url of the backend)
+
+### Persistent Layer
+``` I Have Used MongoDB as its persistence layer. ```
+
+- All paste data is stored in a MongoDB database
+
+- The backend communicates with MongoDB using Mongoose
+
+- Each paste is persisted as a document, allowing easy retrieval and optional expiration handling
+
+- MongoDB was chosen for its flexibility, scalability, and suitability for document-based data such as text pastes.
 
 ### Steps
 
