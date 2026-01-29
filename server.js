@@ -10,16 +10,18 @@ const PORT=process.env.PORT;
 
 const app=express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://verdant-phoenix-c09c73.netlify.app/"
+];
+
 app.use(cors({
-    origin:["http://localhost:5173"]
+    origin:allowedOrigins
 }))
 
 app.use(express.json())
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://paste-bin-frontend.vercel.app"
-];
+
 
 
 const connectToDb=()=>{

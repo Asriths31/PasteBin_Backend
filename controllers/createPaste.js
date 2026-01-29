@@ -4,14 +4,11 @@ export async function createPaste(req,res){
     try{
         const{content,ttl_seconds,max_views}=req.body;
 
-        console.log({content,ttl_seconds,max_views})
-
         if(!content||!content.trim()){
             return res.status(400).json({message:"Text Cannot be empty"})
         }
 
         if(typeof(ttl_seconds)!=="number"){
-            console.log("typeof(ttl_seconds)",typeof(ttl_seconds))
             return res.status(400).json({message:"Expiry of paste should be a number"})
         }
 
@@ -28,7 +25,6 @@ export async function createPaste(req,res){
         }
 
         const createdPaste=await PasteDocs.create(doc)
-        console.log("createdPastett",createdPaste)
         return res.status(201)
         .json({
             message:"Paste Created Successfully",
