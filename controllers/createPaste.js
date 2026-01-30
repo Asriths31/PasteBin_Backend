@@ -23,8 +23,17 @@ export async function createPaste(req,res){
         if(max_views&&max_views<=0){
             return res.status(400).json({message:"max view limit should be a positive number"})
         }
+    const sanitisedHtml = (text) => {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+        };
 
-        const doc={content}
+
+        const doc={content:sanitisedHtml(content)}
 
         if(ttl_seconds>0){
             doc.expiryDate=new Date(Date.now()+ttl_seconds*1000);
