@@ -13,8 +13,17 @@ export async function createPaste(req,res){
         }
 
         if(typeof(max_views)!=="number"){
-            return res.status(400).json({message:"max view limtit should be a number"})
+            return res.status(400).json({message:"max view limit should be a number"})
         }
+
+        if(ttl_seconds&&ttl_seconds<=0){
+            return res.status(400).json({message:"Expiry of paste should be a positive number"})
+        }
+
+        if(max_views&&max_views<=0){
+            return res.status(400).json({message:"max view limit should be a positive number"})
+        }
+
         const doc={content}
 
         if(ttl_seconds>0){
