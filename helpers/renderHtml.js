@@ -4,7 +4,7 @@ export function renderHtml(content){
     return(`<!DOCTYPE html>
             <html>
                 <head>
-                <title>Paste</title>
+                <title>Paste Viewer</title>
                 </head>
 
                 <body style="font-family: Arial; background:#242424;">
