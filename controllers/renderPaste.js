@@ -24,6 +24,10 @@ export async function renderPaste(req,res){
 
         foundPaste.viewsCount+=1
         await foundPaste.save()
+        res.setHeader(
+            "Content-Security-Policy",
+            "default-src 'self'; script-src 'self'"
+        );
         return res.status(200)
             .send(renderHtml(foundPaste.content))
     }
