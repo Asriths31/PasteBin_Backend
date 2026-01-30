@@ -16,7 +16,8 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-    origin:allowedOrigins
+    origin:allowedOrigins,
+    methods: ["GET", "POST", "OPTIONS"],
 }))
 
 app.use(express.json())
