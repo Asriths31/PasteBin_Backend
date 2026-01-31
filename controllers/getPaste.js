@@ -18,11 +18,13 @@ export async function getPaste(req,res) {
 
         foundPaste.viewsCount+=1
         await foundPaste.save()
+        const remainingViews=foundPaste.maxViews?foundPaste.maxViews-foundPaste.viewsCount:null;
+        const expiresAt=foundPaste.expiryDate??null
         return res.status(200)
             .json({
                 content:foundPaste.content,
-                remaining_views:foundPaste.maxViews-foundPaste.viewsCount,
-                expires_at:foundPaste.expiryDate
+                remaining_views:remainingViews,
+                expires_at:expiresAt
             })
     }
     catch (err) {
