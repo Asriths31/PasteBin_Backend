@@ -33,6 +33,15 @@ https://verdant-phoenix-c09c73.netlify.app/
 
 ---
 
+### Frontend Repository Link
+
+```
+https://github.com/Asriths31/PasteBin_Frontend
+
+```
+
+---
+
 ## How to run the app locally
 
 ### Prerequisites
