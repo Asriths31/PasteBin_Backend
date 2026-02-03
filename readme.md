@@ -18,27 +18,23 @@ The project focuses on simplicity, fast performance.
 ---
 
 ### Deployed Backend URL
-```
+
 [https://pastebin-backend-8cl7.onrender.com/](https://pastebin-backend-8cl7.onrender.com/)
 
-```
 ---
 
 ### Deployed Frontend URL
 
-```
 [https://verdant-phoenix-c09c73.netlify.app/](https://verdant-phoenix-c09c73.netlify.app/)
 
-```
 
 ---
 
 ### Frontend Repository Link
 
-```
+
 [https://github.com/Asriths31/PasteBin_Frontend](https://github.com/Asriths31/PasteBin_Frontend)
 
-```
 
 ---
 
