@@ -65,6 +65,8 @@ The project focuses on simplicity, fast performance.
 post ("/api/pastes", createPaste);
 get ("/api/healthz", healthCheck);
 get("/api/pastes/:id", getContent);
+get("/p/:id", getContentPage);
+
 ```
 ---
 
