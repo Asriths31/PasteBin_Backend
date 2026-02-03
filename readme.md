@@ -3,6 +3,36 @@
 Pastebin Lite is a lightweight web application that allows users to create and share text pastes easily.  
 The project focuses on simplicity, fast performance.
 
+---
+
+## Tech Stack
+
+- Frontend: React.js
+- Backend: Node.js, Express
+- Database: MongoDB Atlas
+- Deployment: Render(backend),netlify(frontend)
+
+---
+
+
+---
+
+### Deployed Backend URL
+```
+https://pastebin-backend-8cl7.onrender.com/
+
+```
+---
+
+### Deployed Frontend URL
+
+```
+https://verdant-phoenix-c09c73.netlify.app/
+
+```
+
+---
+
 ## How to run the app locally
 
 ### Prerequisites
@@ -24,6 +54,14 @@ The project focuses on simplicity, fast performance.
 - Each paste is persisted as a document, allowing easy retrieval and optional expiration handling
 
 - MongoDB was chosen for its flexibility, scalability, and suitability for document-based data such as text pastes.
+
+### End points of server
+```
+post ("/api/pastes", createPaste);
+get ("/api/healthz", healthCheck);
+get("/api/pastes/:id", getContent);
+```
+---
 
 ### Steps
 
